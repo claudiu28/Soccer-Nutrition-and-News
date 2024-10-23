@@ -7,23 +7,24 @@ export const NewsContext = createContext(undefined);
 const NewsProvider = ({children}) => {
 
     const init = {
-        info : [],
-        multipleInfo : [],
-        errors : null,
+        info: [],
+        multipleInfo: [],
+        errors: null,
     }
 
-    const reducerInit = (init) =>
-    {
+    const reducerInit = (init) => {
         return init;
     }
     const [newsState, dispatch] = useReducer(NewsReducer, init, reducerInit);
 
-    return (<NewsContext.Provider value={{newsState,dispatch}}>
-        {children}
-    </NewsContext.Provider>);
+    return (
+        <NewsContext.Provider value={{newsState, dispatch}}>
+            {children}
+        </NewsContext.Provider>
+    );
 }
 
 NewsProvider.propTypes = {
-    children : PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 export default NewsProvider;

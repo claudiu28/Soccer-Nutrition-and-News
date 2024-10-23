@@ -7,7 +7,7 @@ const NutritionProvider = ({children}) => {
     const init = {
         recipes: [],
         ingredients: [],
-        errors : null,
+        errors: null,
     }
     const initialize = (init) => {
         return init;
@@ -16,7 +16,7 @@ const NutritionProvider = ({children}) => {
     const [stateNutrition, dispatch] = useReducer(FoodReducer, init, initialize);
     return (
         <>
-            <NutritionContext.Provider value={{stateNutrition,dispatch}}>
+            <NutritionContext.Provider value={{stateNutrition, dispatch}}>
                 {children}
             </NutritionContext.Provider>
         </>

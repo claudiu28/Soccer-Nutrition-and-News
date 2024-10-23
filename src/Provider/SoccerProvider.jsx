@@ -18,13 +18,13 @@ const SoccerProvider = ({children}) => {
     }
     const [stateSoccer, dispatch] = useReducer(ReducerSoccer, init, initialize);
     return (
-      <SoccerContext.Provider value={{stateSoccer,dispatch}}>
-          {children}
-      </SoccerContext.Provider>
+        <SoccerContext.Provider value={{stateSoccer, dispatch}}>
+            {children}
+        </SoccerContext.Provider>
     );
 }
 
 SoccerProvider.propTypes = {
-    children : PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 export default SoccerProvider;
