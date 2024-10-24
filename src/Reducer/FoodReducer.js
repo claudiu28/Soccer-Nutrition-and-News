@@ -3,9 +3,6 @@ const FoodReducer = (state, action) => {
         case "SEARCH_RECIPE": {
             return {...state, recipes: action.result};
         }
-        case "INC_FOOD_EXP": {
-            return {...state, ingredients: action.result};
-        }
         case "ERROR_FOODS": {
             return {...state, errors: action.result};
         }

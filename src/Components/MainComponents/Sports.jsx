@@ -80,23 +80,24 @@ const DataFootball = () => {
                 <Divider borderColor="teal.500" borderWidth="2px" my={4}/>
 
                 <Box width="100%" maxW="900px" mb={4}>
-                    <LeagueFootball selectedLeague={selectedLeague} handleChangeTeam={handleChangeTeam} />
+                    <LeagueFootball selectedLeague={selectedLeague} handleChangeTeam={handleChangeTeam}/>
                 </Box>
 
                 <Box width="100%" maxW="900px" mb={4}>
-                    <TeamsFootball selectedLeague={selectedLeague} selectedTeam={selectedTeam} handleChangeStatistics={handleChangeStatistics} />
+                    <TeamsFootball selectedLeague={selectedLeague} selectedTeam={selectedTeam}
+                                   handleChangeStatistics={handleChangeStatistics}/>
                 </Box>
 
                 <Box width="100%" maxW="900px" mb={4}>
-                    <StatisticsFootball selectedTeam={selectedTeam} />
+                    <StatisticsFootball selectedTeam={selectedTeam}/>
                 </Box>
 
                 <Box width="100%" maxW="900px" mb={4}>
-                    <SeasonsFootball handleChangeSeason={handleChangeSeason} />
+                    <SeasonsFootball handleChangeSeason={handleChangeSeason}/>
                 </Box>
 
                 <Box width="100%" maxW="900px" mb={4}>
-                    <PlayersFootball selectedTeam={selectedTeam} selectedSeason={selectedSeason} />
+                    <PlayersFootball selectedTeam={selectedTeam} selectedSeason={selectedSeason}/>
                 </Box>
             </Box>
         </>

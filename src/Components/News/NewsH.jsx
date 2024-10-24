@@ -73,7 +73,7 @@ const NewsH = () => {
                         </HStack>
                     </CardBody>
                     <CardFooter display="flex" flexDirection="row" justifyContent="center"
-                                              alignItems="center">
+                                alignItems="center">
                         <Button colorScheme="blue" onClick={openModal}>Open Your News Form</Button>
                     </CardFooter>
                 </Box>

@@ -28,15 +28,16 @@ const Footer = () => {
             <Box display="flex" flexDirection={{base: "column", md: "row"}} justifyContent="space-around"
                  alignItems="center" overflow="hidden" m={4} p={4}>
                 <Box>
-                    <Image src={logos} alt="logos" objectFit="contain" h="100px" borderRadius="50px" border = "3px solid black"/>
+                    <Image src={logos} alt="logos" objectFit="contain" h="100px" borderRadius="50px"
+                           border="3px solid black"/>
                 </Box>
                 <UnorderedList listStyleType="none">
                     {Object.entries(navLinks).map(([item, icon], index) => (
                         <ListItem key={index}>
                             <Link as={RouterLink} to={item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`}
-                                display="flex" flexDirection="row" justifyContent="center" alignItems = "center"
+                                  display="flex" flexDirection="row" justifyContent="center" alignItems="center"
                             >
-                                <Text color="blue.600" fontSize="xl" mr = {2}>{icon}</Text>
+                                <Text color="blue.600" fontSize="xl" mr={2}>{icon}</Text>
                                 <Text fontSize="xl">{item}</Text>
                             </Link>
                         </ListItem>
@@ -46,15 +47,15 @@ const Footer = () => {
                     {Object.entries(socials).map(([social, data]) => (
                         <ListItem key={data.url}>
                             <Link href={data.url} isExternal
-                                  display="flex" flexDirection="row" justifyContent="center" alignItems = "center">
-                                <Text color="blue.600" fontSize="xl" mr = {2}>{data.icon}</Text>
+                                  display="flex" flexDirection="row" justifyContent="center" alignItems="center">
+                                <Text color="blue.600" fontSize="xl" mr={2}>{data.icon}</Text>
                                 <Text fontSize="xl">{social}</Text>
                             </Link>
                         </ListItem>
                     ))}
                 </UnorderedList>
             </Box>
-            <Text textAlign="center" color="cyan.900" mb = {5}>©Copyright Sports, News and Nutrition</Text>
+            <Text textAlign="center" color="cyan.900" mb={5}>©Copyright Sports, News and Nutrition</Text>
         </>
     );
 };

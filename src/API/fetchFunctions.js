@@ -53,16 +53,6 @@ export const fetchFoodsData = async (urls, options, dispatch) => {
     }
 };
 
-export const fetchIncExp = async (urls, options, dispatch) => {
-    try {
-        const ingredient = await fetch(urls.urls2, options);
-        const ingredientToJson = await ingredient.json();
-        dispatch({type: "INC_FOOD_EXP", result: ingredientToJson["products"]});
-    } catch (error) {
-        dispatch({type: "ERROR_FOODS", result: error});
-    }
-};
-
 
 export const fetchSoccerNews = async (urls, options, dispatch) => {
     try {

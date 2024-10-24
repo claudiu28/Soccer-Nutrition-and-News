@@ -6,7 +6,6 @@ export const NutritionContext = createContext(undefined);
 const NutritionProvider = ({children}) => {
     const init = {
         recipes: [],
-        ingredients: [],
         errors: null,
     }
     const initialize = (init) => {

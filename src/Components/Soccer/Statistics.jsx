@@ -1,23 +1,23 @@
-import { useContext } from "react";
-import { SoccerContext } from "../../Provider/SoccerProvider.jsx";
-import { Table, Thead, Tbody, Tr, Th, Td, Box, Heading, Text } from "@chakra-ui/react";
+import {useContext} from "react";
+import {SoccerContext} from "../../Provider/SoccerProvider.jsx";
+import {Table, Thead, Tbody, Tr, Th, Td, Box, Heading, Text} from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
-const StatisticsFootball = ({ selectedTeam }) => {
-    const { stateSoccer } = useContext(SoccerContext);
+const StatisticsFootball = ({selectedTeam}) => {
+    const {stateSoccer} = useContext(SoccerContext);
 
     if (!stateSoccer.statistics || !stateSoccer.statistics.matchs) {
-        return <Text color = "red.700">No statistics available</Text>;
+        return <Text color="red.700">No statistics available</Text>;
     }
 
     const teamDetails = stateSoccer.teams.find((item) => Number(item.team_id) === Number(selectedTeam));
 
     if (!teamDetails) {
-        return <Text color = "red.700">No team selected or team not found.</Text>;
+        return <Text color="red.700">No team selected or team not found.</Text>;
     }
 
-    const { statistics } = stateSoccer;
-    const { matchs, goals, goalsAvg } = statistics;
+    const {statistics} = stateSoccer;
+    const {matchs, goals, goalsAvg} = statistics;
 
     return (
         <Box mt={4}>
@@ -89,6 +89,6 @@ const StatisticsFootball = ({ selectedTeam }) => {
 };
 
 StatisticsFootball.propTypes = {
-    selectedTeam : PropTypes.number.isRequired,
+    selectedTeam: PropTypes.number.isRequired,
 }
 export default StatisticsFootball;
