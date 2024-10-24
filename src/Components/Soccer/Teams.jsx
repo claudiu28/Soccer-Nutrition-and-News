@@ -8,20 +8,20 @@ const TeamsFootball = ({selectedLeague,selectedTeam, handleChangeStatistics }) =
     const { stateSoccer } = useContext(SoccerContext);
 
     if (!stateSoccer.teams || !Array.isArray(stateSoccer.teams)) {
-        return <p>No teams available</p>;
+        return <Text color = "red.700">No teams available</Text>;
     }
 
     const TeamsDetails = stateSoccer.teams.find((item) => Number(item.team_id) === Number(selectedTeam));
     const leagueSelect = stateSoccer.leagues.find((item) => Number(item.league_id) === Number(selectedLeague))
     if(!leagueSelect){
-        return <p>No league selected!</p>
+        return <Text color = "red.700">No league selected!</Text>
     }
     return (
         <>
             <Box>
                 <Select placeholder="Select a team" value={selectedTeam} onChange={handleChangeStatistics}>
                     {stateSoccer.teams.map((team) => (
-                        <option key={team.team_id} value={team.team_id}>
+                        <option  key={team.team_id} value={team.team_id}>
                             {team.name}
                         </option>
                     ))}

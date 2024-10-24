@@ -72,7 +72,8 @@ const NewsH = () => {
                             <Badge colorScheme="blue">Champions League</Badge>
                         </HStack>
                     </CardBody>
-                    <CardFooter>
+                    <CardFooter display="flex" flexDirection="row" justifyContent="center"
+                                              alignItems="center">
                         <Button colorScheme="blue" onClick={openModal}>Open Your News Form</Button>
                     </CardFooter>
                 </Box>

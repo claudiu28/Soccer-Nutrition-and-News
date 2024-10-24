@@ -1,19 +1,19 @@
 import { useContext } from "react";
 import { SoccerContext } from "../../Provider/SoccerProvider.jsx";
-import { Table, Thead, Tbody, Tr, Th, Td, Box, Heading } from "@chakra-ui/react";
+import { Table, Thead, Tbody, Tr, Th, Td, Box, Heading, Text } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
 const StatisticsFootball = ({ selectedTeam }) => {
     const { stateSoccer } = useContext(SoccerContext);
 
     if (!stateSoccer.statistics || !stateSoccer.statistics.matchs) {
-        return <p>No statistics available</p>;
+        return <Text color = "red.700">No statistics available</Text>;
     }
 
     const teamDetails = stateSoccer.teams.find((item) => Number(item.team_id) === Number(selectedTeam));
 
     if (!teamDetails) {
-        return <p>No team selected or team not found.</p>;
+        return <Text color = "red.700">No team selected or team not found.</Text>;
     }
 
     const { statistics } = stateSoccer;
@@ -24,7 +24,7 @@ const StatisticsFootball = ({ selectedTeam }) => {
             <Heading as="h3" size="lg" mb={4}>
                 Match Statistics for {teamDetails.name}
             </Heading>
-            <Table variant="striped" colorScheme="teal">
+            <Table variant="striped" colorScheme="green">
                 <Thead>
                     <Tr>
                         <Th>Statistic</Th>

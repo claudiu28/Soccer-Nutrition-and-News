@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { SoccerContext } from "../../Provider/SoccerProvider.jsx";
 import PropTypes from "prop-types";
-import {Select, Box} from "@chakra-ui/react";
+import {Select, Box, Text} from "@chakra-ui/react";
 
 const SeasonsFootball = ({handleChangeSeason }) => {
     const { stateSoccer } = useContext(SoccerContext);
 
     if (!stateSoccer.season || !Array.isArray(stateSoccer.season)) {
-        return <p>No seasons available</p>;
+        return <Text color = "red.700">No seasons available</Text>;
     }
 
     const {season} = stateSoccer;
