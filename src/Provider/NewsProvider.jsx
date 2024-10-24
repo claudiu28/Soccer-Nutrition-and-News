@@ -7,7 +7,6 @@ export const NewsContext = createContext(undefined);
 const NewsProvider = ({children}) => {
 
     const init = {
-        info: [],
         multipleInfo: [],
         errors: null,
     }

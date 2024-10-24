@@ -16,7 +16,6 @@ const Header = () => {
     const images = [slide1Imag, slide2Imag, slide3Imag, slide4Imag, slide5Imag, slide6Imag];
 
     const settings = {
-        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -26,9 +25,9 @@ const Header = () => {
     };
 
     return (
-        <Box display="flex" flexDirection={{base: "column", md: "row"}} alignItems="center">
+        <Box display="flex" flexDirection={{base: "column", md: "row"}} alignItems="center" overflow="hidden">
             <Box w={{base: "100%", md: "55%"}} p={4} m={5}>
-                <Heading color="blue.800" fontSize={{base: "xl", md: "4xl"}}>Sports and Nutrition</Heading>
+                <Heading color="blue.800" fontSize={{base: "xl", md: "4xl"}}>Soccer, Nutrition and News</Heading>
                 <Text color="grey.700" fontSize={{base: "xs", md: "xl"}}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry’s
@@ -44,7 +43,7 @@ const Header = () => {
                 </Box>
             </Box>
 
-            <Box w={{base: "100%", md: "45%"}} p={4}>
+            <Box w={{base: "100%", md: "45%"}} p={4} mb={3}>
                 <Slider {...settings}>
                     {images.map((imag, index) => (
                         <Box key={index} borderRadius="20px" overflow="hidden">

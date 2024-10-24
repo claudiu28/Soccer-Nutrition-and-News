@@ -21,7 +21,7 @@ const About = () => {
                     <VStack>
                         <Heading mb="2" textAlign="center">Soccer, Nutrition, and News: <strong>The Winning
                             Formula</strong></Heading>
-                        <Text>
+                        <Text textAlign="justify">
                             In the world of soccer, performance on the field is about much more than just talent and
                             training. Behind every successful athlete is a well-thought-out strategy that combines
                             physical conditioning, mental preparation, and one key ingredient: nutrition. The connection
@@ -54,7 +54,7 @@ const About = () => {
                         <Heading mb={2} textAlign="center" size="md">
                             The Role of News in Soccer and Nutrition
                         </Heading>
-                        <Text>
+                        <Text textAlign="justify">
                             In today’s fast-paced world, staying updated with the latest soccer news is essential for
                             players, coaches, and fans alike. News doesn’t just cover game scores or transfer
                             rumors<br/>—it’s a source of valuable information on emerging trends in sports science and
@@ -83,7 +83,7 @@ const About = () => {
                         <Heading mb={2} textAlign="center" size="md">
                             A Holistic Approach to Soccer Success
                         </Heading>
-                        <Text>
+                        <Text textAlign="justify">
                             The connection between soccer, nutrition, and news underscores a holistic approach to
                             athletic success. Elite soccer players don’t just rely on training drills and tactical
                             strategies—they optimize their nutrition and stay informed through the latest sports

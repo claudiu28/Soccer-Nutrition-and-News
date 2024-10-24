@@ -21,7 +21,7 @@ import {useNavigate} from "react-router-dom";
 const Main = () => {
     const navigate = useNavigate();
     return (<>
-            <Box mt={5} mb={5} ml={8} mr={8}>
+            <Box m={8} overflow="hidden">
                 <Grid templateColumns={{base: "repeat(1,1fr)", md: "repeat(3, 1fr)"}} gap="6">
                     <GridItem>
                         <Box>
@@ -99,7 +99,7 @@ const Main = () => {
                 </Grid>
             </Box>
             <Box display="flex" flexDirection={{base: "column", md: "row"}} overflow="hidden" alignItems={"center"}
-                 boxShadow="4px 4px 6px rgba(255, 165, 0, 0.5)" p={3} m={5}>
+                 boxShadow="2px 2px 3px rgba(255, 165, 0, 0.5)" p={3} m={5}>
                 <Box w="45%" m={4}>
                     <Image objectFit="contain" src={complete}
                            alt="Image about soccer nutrition"
@@ -108,11 +108,11 @@ const Main = () => {
                            boxShadow="4px 4px 12px darkgreen"
                     />
                 </Box>
-                <Box p={4} w="55%" m={4}>
+                <Box p={4} w="55%" mb={4}>
                     <VStack>
                         <Heading mb="2" textAlign="center">Uniting the World: How News and Soccer Bring Global Stories
                             to Life</Heading>
-                        <Text>
+                        <Text textAlign="justify">
                             In today’s fast-paced world, news and soccer play pivotal roles in connecting people across
                             borders, transcending cultures, and uniting the global community. News acts as a powerful
                             tool for information, shaping the way we understand the world around us, while soccer, the

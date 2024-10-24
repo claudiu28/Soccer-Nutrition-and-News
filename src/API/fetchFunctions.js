@@ -63,21 +63,12 @@ export const fetchIncExp = async (urls, options, dispatch) => {
     }
 };
 
-export const fetchSomeNews = async (urls, options, dispatch) => {
-    try {
-        const dates = await fetch(urls.url, options);
-        const dataJson = await dates.json();
-        dispatch({type: "DATA", result: dataJson.data});
-    } catch (error) {
-        dispatch({type: "ERROR_NEWS", result: error});
-    }
-};
 
 export const fetchSoccerNews = async (urls, options, dispatch) => {
     try {
-        const dates = await fetch(urls.url2, options);
+        const dates = await fetch(urls.url, options);
         const dataJson = await dates.json();
-        dispatch({type: "NEWS_M_INFO", result: dataJson.result});
+        dispatch({type: "NEWS_M_INFO", result: dataJson.articles});
     } catch (error) {
         dispatch({type: "ERROR_NEWS", result: error});
     }
