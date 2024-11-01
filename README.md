@@ -71,8 +71,16 @@ users can put their own news.
     ```bash
     npm install
     ```
+3. Configure Environment Variables
 
-3. Run app:
+    Create a `.env` file in the root directory of your project with the following content:
+    
+    ```textplain 
+    VITE_API_FOOTBALL_KEY=your_actual_api_key_here
+    VITE_API_SPOONACULAR_KEY=your_actual_api_key_here
+    ```
+
+4. Run app:
 
    ```bash
    npm run dev
