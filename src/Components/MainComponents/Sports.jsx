@@ -26,7 +26,7 @@ const DataFootball = () => {
     const options = useMemo(() => ({
         method: "GET",
         headers: {
-            'x-rapidapi-key': '7d3790c09emsh7fe8df33e6a595ap15261ejsnabfbe3cc0785',
+            'x-rapidapi-key': import.meta.env.VITE_API_FOOTBALL_KEY,
             'x-rapidapi-host': 'API-football-v1.p.rapidapi.com',
         }
     }), []);
